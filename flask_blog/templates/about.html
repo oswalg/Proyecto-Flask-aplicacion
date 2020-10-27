@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> {% block title %} Acerca del autor {% endblock %} </h1>
+
+    <p>
+        Conoce mas acerca del autor {{name}}
+    </p>
+
+    <p>
+        Hola, soy  <mark> {{name}} </mark> y soy creador de contenidos digitales, en este proyecto creamos un mini blog 
+        con diferentes entradas para los usaurios donde pueden crear, editar y eliminar articulos del blog.
+
+        Basicamente es un proyecto donde utilizamos lenguaje de programacion <mark>Python</mark>, con un micro-framework de el
+        llamado Flask y lo conectamos a una base de datos para guardar los datos sqlite3.
+    </p>
+
+    <p>
+        Aparte de mis habilidades de codificacion tambien poseo estas habilidades: 
+    </p>
+
+    {% for habilidades in profesiones %}
+    <ul>
+        <li> {{habilidades}} </li>
+    </ul>
+    {% endfor %}
+
+    <h4>
+        Puedes seguirme en las siguientes redes sociales:
+
+    </h4>
+
+    <div>
+        
+            <ul>
+                <li> Twitter -  {{social_media.Twitter}} </li>
+                <li> Instagram -  {{social_media.Instagram}} </li>
+                <li> Gmail -  {{social_media.Gmail}} </li>
+                <li> facebook -  {{social_media.Facebook}} </li>
+            </ul>
+            
+    </div>
+
+{% endblock %}
+
+
+
